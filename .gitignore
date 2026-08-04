@@ -1,0 +1,18 @@
+# secrets / local config
+.env
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# vector cache (rebuilt from crawl; do not commit)
+chroma_store/
+
+# crawl snapshots are working data, not deliverables
+snapshots/*.json
+
+# reports ARE the permanent record - keep them.
+# ignore nothing under reports/ except OS cruft
+.DS_Store

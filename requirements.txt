@@ -1,0 +1,20 @@
+# Core pipeline (versions verified in test)
+httpx==0.28.1
+beautifulsoup4==4.14.3
+lxml==6.0.2
+networkx==3.6.1
+rank-bm25==0.2.2
+rapidfuzz==3.14.5
+jinja2==3.1.6
+pydantic==2.13.4
+pydantic-settings==2.14.2
+pandas==3.0.2
+openpyxl==3.1.5
+numpy==2.4.4
+
+# Embeddings + vector cache (downloads BGE model on first run)
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+
+# LLM drafting (optional at runtime; pipeline falls back to templates without a key)
+groq>=0.11.0
