@@ -1,4 +1,4 @@
-"""Semantic embeddings with a persistent ChromaDB cache.
+﻿"""Semantic embeddings with a persistent ChromaDB cache.
 
 Each page is embedded with a Sentence-Transformers model (BGE-small by default)
 and stored in ChromaDB keyed by URL, with the page's content hash in metadata.
@@ -75,7 +75,7 @@ class EmbeddingIndex:
         cached_vecs: dict[str, list[float]] = {}
         cached_hashes: dict[str, str] = {}
         got_ids = existing.get("ids") or []
-        got_embs = existing.get("embeddings") or []
+        got_embs = existing.get("embeddings"); got_embs = [] if got_embs is None else got_embs
         got_meta = existing.get("metadatas") or []
         for i, uid in enumerate(got_ids):
             meta = got_meta[i] or {}
